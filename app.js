@@ -5,10 +5,11 @@ import UserController from "./controllers/users/users-controller.js";
 import TuitsController from "./controllers/tuits/tuits-controller.js";
 import mongoose from "mongoose";
 
-mongoose.connect('mongodb://localhost:27017/tuiter');
+
 const CONNECTION_STRING = process.env.DB_CONNECTION_STRING
-    || 'mongodb://localhost:27017/tuiter'
+    || 'mongodb+srv://jaeheonkim0913:2S65Sp5izjt48R99@cluster0.pplfvtk.mongodb.net/tuiter?retryWrites=true&w=majority'
 mongoose.connect(CONNECTION_STRING);
+
 const app = express();
 app.use(cors());
 app.use(express.json());
